@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">idk wh
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anantham Silks & Boutique | Heritage & Modern Catalog</title>
+    <title>SALIYA Silks & Boutique| Heritage & Modern Catalog</title>
     <meta name="description" content="Explore exclusive Clothing collections, festive wear, and ethnic apparel with direct WhatsApp ordering.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +37,7 @@
     <!-- Sticky Navigation -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" onclick="showHome()" class="text-2xl font-black tracking-tight text-amber-950 cursor-pointer">ANANTHAM<span class="text-amber-600">.</span></a>
+            <a href="#" onclick="showHome()" class="text-2xl font-black tracking-tight text-amber-950 cursor-pointer">SALIYA<span class="text-amber-600">.</span></a>
             
             <nav id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
                 <a href="#sarees-section" class="hover:text-amber-900 transition">Clothing</a>
@@ -271,7 +271,7 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Flagship Showrooms</span>
-                <h2 class="text-3xl font-black mt-1 text-amber-950">Anantham Silks Tamil Nadu</h2>
+                <h2 class="text-3xl font-black mt-1 text-amber-950">SALIYA Silks Tamil Nadu</h2>
                 <p class="text-slate-600 text-sm mt-3 leading-relaxed">
                     Branches across Kumbakonam, Thanjavur, Ramanathapuram, Rajapalayam, Pudukkottai, Cuddalore & Tiruppur.<br>
                     Open Everyday (9:30 AM - 9:30 PM)
@@ -293,7 +293,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-amber-100 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <span>© 2026 Anantham Silks Sample Showcase. Built for Regional Retail Excellence.</span>
+            <span>© 2026 SALIYA Silks Sample Showcase. Built for Regional Retail Excellence.</span>
             <button onclick="openMerchantModal()" class="text-amber-900 font-bold hover:underline">💼 For Showroom Owners & Merchants</button>
         </div>
     </footer>
@@ -465,13 +465,13 @@
             const allProds = getAllProducts();
             const prod = allProds.find(p => p.id === productId);
             const chosenSize = selectedSizes[productId] || prod.sizes[0];
-            const message = `Hi, I want to inquire about *${prod.name}* (Variant/Size: *${chosenSize}*) priced at *${prod.price}* from the Anantham catalog. Please share stock availability.`;
+            const message = `Hi, I want to inquire about *${prod.name}* (Variant/Size: *${chosenSize}*) priced at *${prod.price}* from the SALIYA catalog. Please share stock availability.`;
             window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         function shareCurrentProduct() {
             if (activeProduct) {
-                const text = `Check out this gorgeous *${activeProduct.name}* priced at *${activeProduct.price}* on Anantham Silks Showcase!`;
+                const text = `Check out this gorgeous *${activeProduct.name}* priced at *${activeProduct.price}* on SALIYA Silks Showcase!`;
                 if (navigator.share) {
                     navigator.share({ title: activeProduct.name, text: text, url: window.location.href }).catch(() => {});
                 } else {
