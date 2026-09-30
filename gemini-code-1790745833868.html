@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anantham Silks & Boutique | Heritage & Modern Catalog</title>
+    <meta name="description" content="Explore exclusive Clothing collections, festive wear, and ethnic apparel with direct WhatsApp ordering.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .size-btn.active { background-color: #78350f; color: #fff; border-color: #78350f; }
+        
+        @keyframes slideHorizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-horizontal-slide {
+            display: flex;
+            width: max-content;
+            animation: slideHorizontal 35s linear infinite;
+        }
+        .animate-horizontal-slide:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-slate-900 antialiased selection:bg-amber-800 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-950 text-amber-100 text-[11px] font-bold tracking-widest uppercase py-2.5 text-center px-4 flex justify-center items-center gap-3">
+        <span>✨ Heritage Handlooms & Boutique Collections • Pan India Delivery & Direct WhatsApp Support</span>
+        <span class="hidden md:inline bg-amber-900/50 px-2 py-0.5 rounded text-amber-300">Tamil Nadu Flagship Edition</span>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" onclick="showHome()" class="text-2xl font-black tracking-tight text-amber-950 cursor-pointer">ANANTHAM<span class="text-amber-600">.</span></a>
+            
+            <nav id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+                <a href="#sarees-section" class="hover:text-amber-900 transition">Clothing</a>
+                <a href="#women-section" class="hover:text-amber-900 transition">Women Ethnic</a>
+                <a href="#mens-kids-section" class="hover:text-amber-900 transition">Men & Kids</a>
+                <a href="#merchant-pitch" class="hover:text-amber-700 transition font-bold">💡 Why Digital Catalog?</a>
+                <a href="#contact" class="hover:text-amber-900 transition">Store Locator</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button onclick="openMerchantModal()" class="hidden sm:flex items-center gap-1.5 bg-amber-50 text-amber-900 border border-amber-200 px-4 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-amber-100 transition">
+                    <span>💼</span> For Shop Owners
+                </button>
+                <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20inquire%20about%20your%20clothing%20collection." target="_blank" class="bg-amber-900 text-white px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-amber-800 transition shadow-md flex items-center gap-2">
+                    <span>💬</span> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <div id="app-container">
+
+        <!-- ==================== HOME VIEW ==================== -->
+        <div id="home-view">
+            <!-- Hero Section -->
+            <section class="relative pt-12 pb-16 md:py-20 bg-gradient-to-b from-amber-100/50 to-white overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 text-center space-y-6">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1.5 rounded-full inline-block">
+                        🥻 Trusted Since 1992 • Authentic Handcrafted Masterpieces
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05] max-w-3xl mx-auto text-amber-950">
+                        Redefining Luxury in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-900 to-yellow-700">Clothing.</span>
+                    </h1>
+                    <p class="text-slate-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+                        Explore royal traditional weaves, exquisite apparel, and festive collections directly on your phone with instant WhatsApp consultation.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="max-w-md mx-auto mt-6 relative">
+                        <input type="text" id="catalog-search" oninput="handleSearch(this.value)" placeholder="Search clothing, soft silk, kurtis, dhotis..." class="w-full bg-white border border-amber-200 rounded-full px-6 py-4 text-xs font-semibold shadow-sm focus:outline-none focus:border-amber-900">
+                        <span class="absolute right-5 top-4 text-slate-400 text-sm">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Horizontal Sliding Heritage Showcase -->
+                <div class="mt-12 relative overflow-hidden w-full py-5 bg-amber-950 border-y border-amber-900">
+                    <div class="animate-horizontal-slide gap-6 px-3">
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=600')"></div>
+                        
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=600')"></div>
+                        <div class="w-72 h-80 rounded-2xl bg-cover bg-center shadow-lg flex-shrink-0" style="background-image: url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=600')"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Master Catalog Sections -->
+            <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+                <!-- CLOTHING SECTION -->
+                <section id="sarees-section" class="scroll-mt-28">
+                    <div class="mb-10 pb-4 border-b border-amber-200 flex justify-between items-end">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Bridal & Festive Masterpieces</span>
+                            <h2 class="text-3xl font-black tracking-tight mt-1 text-amber-950">Clothing</h2>
+                        </div>
+                    </div>
+                    <div id="grid-sarees" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                </section>
+
+                <!-- WOMEN ETHNIC WEAR -->
+                <section id="women-section" class="scroll-mt-28">
+                    <div class="mb-10 pb-4 border-b border-amber-200 flex justify-between items-end">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Kurti & Sharara Sets</span>
+                            <h2 class="text-3xl font-black tracking-tight mt-1 text-amber-950">Women's Ethnic Collection</h2>
+                        </div>
+                    </div>
+                    <div id="grid-women" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                </section>
+
+                <!-- MEN & KIDS COLLECTION -->
+                <section id="mens-kids-section" class="scroll-mt-28">
+                    <div class="mb-10 pb-4 border-b border-amber-200 flex justify-between items-end">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Traditional & Festive Attire</span>
+                            <h2 class="text-3xl font-black tracking-tight mt-1 text-amber-950">Men & Kids Collection</h2>
+                        </div>
+                    </div>
+                    <div id="grid-menskids" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                </section>
+            </main>
+
+            <!-- Merchant Value Proposition Section -->
+            <section id="merchant-pitch" class="py-20 bg-amber-950 text-amber-50 mt-16 scroll-mt-28">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-900/50 px-3.5 py-1.5 rounded-full inline-block mb-3">Why Shop Owners Choose This Web App</span>
+                        <h2 class="text-3xl font-black tracking-tight">Digitize Your Textile Showroom</h2>
+                        <p class="text-amber-200/70 text-xs mt-2">Replace expensive pamphlets and outdated catalogs with a lightning-fast mobile web app that converts window shoppers into direct WhatsApp buyers.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="p-8 rounded-3xl bg-amber-900/30 border border-amber-800/60">
+                            <div class="text-3xl mb-4">💬</div>
+                            <h4 class="font-bold text-lg mb-2 text-amber-100">Direct WhatsApp Orders</h4>
+                            <p class="text-amber-200/70 text-sm leading-relaxed">No complicated checkouts or payment gateways cutting your margins. Customers select design variants and message you instantly.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-amber-900/30 border border-amber-800/60">
+                            <div class="text-3xl mb-4">📲</div>
+                            <h4 class="font-bold text-lg mb-2 text-amber-100">Status & Broadcast Ready</h4>
+                            <p class="text-amber-200/70 text-sm leading-relaxed">Easily share individual clothing items or festival collection drops on WhatsApp Status to reach thousands of regular local clients.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-amber-900/30 border border-amber-800/60">
+                            <div class="text-3xl mb-4">📈</div>
+                            <h4 class="font-bold text-lg mb-2 text-amber-100">Zero Commission Fees</h4>
+                            <p class="text-amber-200/70 text-sm leading-relaxed">Unlike major marketplaces that charge 20% to 30% per sale, 100% of the profit remains with your store.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== PRODUCT DETAILS VIEW ==================== -->
+        <div id="detail-view" class="hidden max-w-7xl mx-auto px-6 py-10">
+            <div class="flex justify-between items-center mb-8">
+                <button onclick="showHome()" class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:text-black transition">
+                    <span>←</span> Back to Catalog
+                </button>
+                <button onclick="shareCurrentProduct()" class="bg-amber-100 hover:bg-amber-200 text-amber-950 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center gap-2">
+                    <span>🔗</span> Share Design
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div id="detail-main-img" class="col-span-2 h-[420px] sm:h-[500px] rounded-3xl bg-cover bg-center shadow-lg border border-amber-100"></div>
+                        <div id="detail-sub-img-1" class="h-64 sm:h-80 rounded-2xl bg-cover bg-center shadow-md border border-amber-100"></div>
+                        <div id="detail-sub-img-2" class="h-64 sm:h-80 rounded-2xl bg-cover bg-center shadow-md border border-amber-100"></div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span id="detail-tag" class="text-[10px] font-extrabold text-amber-900 bg-amber-100 px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-3"></span>
+                        <h1 id="detail-title" class="text-2xl sm:text-3xl font-black text-amber-950 tracking-tight"></h1>
+                        
+                        <div class="mt-3 flex items-baseline gap-3">
+                            <span id="detail-price" class="text-2xl font-black text-amber-950"></span>
+                            <span id="detail-old-price" class="text-sm text-slate-400 line-through"></span>
+                            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg">Inclusive of all taxes</span>
+                        </div>
+
+                        <hr class="my-6 border-amber-100">
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs uppercase font-bold tracking-wider text-slate-700">Select Variant Option</span>
+                                <span class="text-xs text-amber-800 font-bold cursor-pointer hover:underline">Fabric Details</span>
+                            </div>
+                            <div id="detail-sizes" class="flex gap-2"></div>
+                        </div>
+
+                        <div class="mt-8 space-y-3 bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-amber-950">Product Highlights</h4>
+                            <ul class="text-xs text-slate-600 space-y-2">
+                                <li>✨ Premium hand-inspected traditional weave and fabric.</li>
+                                <li>✨ Color-fastness tested for generational durability.</li>
+                                <li>✨ Includes matching accessories or blouse piece as shown.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 space-y-3">
+                        <button id="detail-whatsapp-btn" class="w-full bg-amber-950 text-white text-center py-4 rounded-2xl text-xs font-bold uppercase tracking-wider hover:bg-amber-900 transition shadow-lg flex items-center justify-center gap-2">
+                            <span>💬</span> Inquire / Order via WhatsApp
+                        </button>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-3 bg-white rounded-xl text-center border border-amber-100">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase block">Delivery</span>
+                                <span class="text-xs font-bold text-slate-800">Pan India Shipping Available</span>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl text-center border border-amber-100">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase block">Store Visit</span>
+                                <span class="text-xs font-bold text-slate-800">Available at Showrooms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-24 pt-12 border-t border-amber-100">
+                <div class="mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Curated Matching</span>
+                    <h2 class="text-2xl font-black tracking-tight mt-1 text-amber-950">Similar Masterpieces You Might Like</h2>
+                </div>
+                <div id="related-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Merchant Pitch Modal -->
+    <div id="merchant-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl border border-amber-100">
+            <button onclick="closeMerchantModal()" class="absolute right-6 top-6 text-slate-400 hover:text-black font-bold">✕</button>
+            <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-900 bg-amber-100 px-3 py-1 rounded-full">Developer Pitch to Owner</span>
+            <h3 class="text-2xl font-black mt-3 text-amber-950">Why Your Textile Showroom Needs This</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Give your regular and wedding customers a luxury digital experience on their mobile phones. Showcase festival stock instantly and receive direct inquiries on WhatsApp.
+            </p>
+            <div class="mt-6 space-y-3 bg-amber-50 p-4 rounded-2xl border border-amber-200/60 text-xs">
+                <div class="flex justify-between"><span>⚡ Lightning Fast Web App</span> <strong class="text-slate-900">Mobile Optimized</strong></div>
+                <div class="flex justify-between"><span>💬 Direct WhatsApp Leads</span> <strong class="text-slate-900">No Third-Party Cuts</strong></div>
+                <div class="flex justify-between"><span>💸 Platform Commission</span> <strong class="text-amber-900 font-bold">0% (Keep 100%)</strong></div>
+            </div>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20get%20this%20custom%20web%20catalog%20built%20for%20my%20silk%20showroom." target="_blank" class="mt-6 w-full bg-amber-950 text-white py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider block text-center hover:bg-amber-900 transition">
+                🚀 Deploy This Website For Your Shop
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white text-slate-900 py-20 border-t border-amber-200 mt-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Flagship Showrooms</span>
+                <h2 class="text-3xl font-black mt-1 text-amber-950">Anantham Silks Tamil Nadu</h2>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Branches across Kumbakonam, Thanjavur, Ramanathapuram, Rajapalayam, Pudukkottai, Cuddalore & Tiruppur.<br>
+                    Open Everyday (9:30 AM - 9:30 PM)
+                </p>
+                <div class="mt-6 flex gap-4">
+                    <a href="tel:+919344184954" class="bg-amber-950 text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-900 transition">
+                        📞 Contact Showroom
+                    </a>
+                </div>
+            </div>
+            <div class="bg-amber-50/50 p-8 rounded-3xl border border-amber-200">
+                <h3 class="font-bold text-lg mb-2 text-amber-950">Custom Web Catalog Inquiry</h3>
+                <p class="text-xs text-slate-500 mb-4">Are you a textile store owner wanting a similar digital web app? Drop your info.</p>
+                <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully! The developer will reach out to you shortly.');" class="space-y-3">
+                    <input type="text" placeholder="Showroom Name / Owner Name" required class="w-full bg-white border border-amber-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-amber-900">
+                    <input type="text" placeholder="WhatsApp Number" required class="w-full bg-white border border-amber-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-amber-900">
+                    <button type="submit" class="w-full bg-amber-950 text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-900 transition">Request Sample Demo</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-amber-100 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span>© 2026 Anantham Silks Sample Showcase. Built for Regional Retail Excellence.</span>
+            <button onclick="openMerchantModal()" class="text-amber-900 font-bold hover:underline">💼 For Showroom Owners & Merchants</button>
+        </div>
+    </footer>
+
+    <!-- Script / Database -->
+    <script>
+        const catalogData = {
+            sarees: [
+                { id: 101, name: "Traditional Zari Silk Clothing", category: "sarees", price: "₹20,900", oldPrice: "₹24,900", tag: "Wedding Wear", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=600", sizes: ["With Blouse", "Unstitched Zari"] },
+                { id: 102, name: "Green Floral Motif Silk Clothing", category: "sarees", price: "₹8,900", oldPrice: "₹11,500", tag: "Best Seller", img: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600", sizes: ["Standard", "Contrast Blouse"] },
+                { id: 103, name: "Magenta Floral Tissue Clothing", category: "sarees", price: "₹15,000", oldPrice: "₹18,500", tag: "Festive Edit", img: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=600", sizes: ["Tissue Weave"] },
+                { id: 104, name: "Semi Soft Zari Motifs Clothing", category: "sarees", price: "₹940", oldPrice: "₹1,490", tag: "Daily Elegance", img: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=600", sizes: ["Standard Piece"] }
+            ],
+            women: [
+                { id: 201, name: "Lavender Floral Embroidered Sharara Set", category: "women", price: "₹2,610", oldPrice: "₹3,500", tag: "Trending", img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=600", sizes: ["S", "M", "L", "XL"] },
+                { id: 202, name: "Purple Stone Work Peplum Suit", category: "women", price: "₹2,995", oldPrice: "₹3,995", tag: "New Arrival", img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=600", sizes: ["M", "L", "XL"] },
+                { id: 203, name: "Designer Cotton Kurti & Dupatta", category: "women", price: "₹1,299", oldPrice: "₹1,899", tag: "Popular", img: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=600", sizes: ["S", "M", "L", "XL", "XXL"] },
+                { id: 204, name: "Anarkali Festive Heavy Suit", category: "women", price: "₹3,499", oldPrice: "₹4,599", tag: "Luxury", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=600", sizes: ["M", "L", "XL"] }
+            ],
+            menskids: [
+                { id: 301, name: "Mens Festive Silk Kurta Pajama Set", category: "menskids", price: "₹1,899", oldPrice: "₹2,599", tag: "Best Seller", img: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=600", sizes: ["38", "40", "42", "44"] },
+                { id: 302, name: "Boys Traditional Shirt & Dhoti Combo", category: "menskids", price: "₹999", oldPrice: "₹1,499", tag: "Traditional", img: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1503944583293-c110bc282e74?auto=format&fit=crop&q=80&w=600", sizes: ["4-5Y", "6-7Y", "8-9Y", "10-12Y"] },
+                { id: 303, name: "Mens Premium Linen Formal Shirt", category: "menskids", price: "₹1,199", oldPrice: "₹1,699", tag: "Trending", img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=600", sizes: ["S", "M", "L", "XL"] },
+                { id: 304, name: "Girls Festive Ethnic Lehenga Choli", category: "menskids", price: "₹1,499", oldPrice: "₹2,199", tag: "Kids Special", img: "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&q=80&w=600", subImg1: "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&q=80&w=600", subImg2: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600", sizes: ["3-4Y", "5-6Y", "7-8Y", "9-10Y"] }
+            ]
+        };
+
+        const selectedSizes = {};
+        let activeProduct = null;
+
+        function getAllProducts() {
+            return [...catalogData.sarees, ...catalogData.women, ...catalogData.menskids];
+        }
+
+        function renderAllSections(filterQuery = '') {
+            ['sarees', 'women', 'menskids'].forEach(category => {
+                const container = document.getElementById(`grid-${category}`);
+                const items = catalogData[category].filter(item => 
+                    item.name.toLowerCase().includes(filterQuery.toLowerCase()) || 
+                    item.tag.toLowerCase().includes(filterQuery.toLowerCase())
+                );
+                
+                if (items.length === 0) {
+                    container.innerHTML = `<p class="col-span-full text-xs text-slate-400 py-6 text-center">No matching designs found in this category.</p>`;
+                    return;
+                }
+
+                let html = '';
+                items.forEach(item => {
+                    if (!selectedSizes[item.id]) {
+                        selectedSizes[item.id] = item.sizes[0];
+                    }
+
+                    let sizeBtns = '';
+                    item.sizes.forEach(sz => {
+                        const active = selectedSizes[item.id] === sz ? 'active' : '';
+                        sizeBtns += `<button onclick="event.stopPropagation(); selectSize(${item.id}, '${sz}')" class="size-btn ${active} flex-1 py-1.5 border border-amber-200 rounded-xl text-xs font-bold text-slate-700 transition">${sz}</button>`;
+                    });
+
+                    html += `
+                        <div onclick="openProductDetail(${item.id})" class="group bg-white border border-amber-100 rounded-3xl p-4 flex flex-col justify-between hover:shadow-xl transition cursor-pointer">
+                            <div>
+                                <div class="h-64 rounded-2xl bg-cover bg-center mb-4 relative overflow-hidden" style="background-image: url('${item.img}')">
+                                    <span class="absolute top-3 left-3 bg-amber-950/80 text-amber-100 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg backdrop-blur-sm">${item.tag}</span>
+                                </div>
+                                <span class="text-[10px] font-extrabold text-amber-800 uppercase tracking-widest">CLOTHING WEAVE</span>
+                                <h3 class="font-black text-amber-950 text-base mt-1 group-hover:text-amber-700 transition">${item.name}</h3>
+                                <p class="text-sm font-bold text-slate-800 mt-1">${item.price} <span class="text-xs text-slate-400 line-through font-normal ml-1">${item.oldPrice}</span></p>
+                                
+                                <div class="mt-4">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">Select Variant</span>
+                                    <div class="flex gap-1.5">
+                                        ${sizeBtns}
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="event.stopPropagation(); orderWhatsApp(${item.id})" class="mt-6 w-full bg-amber-950 text-white text-center py-3 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-amber-900 transition shadow-md">
+                                💬 Inquire via WhatsApp
+                            </button>
+                        </div>
+                    `;
+                });
+
+                container.innerHTML = html;
+            });
+        }
+
+        function handleSearch(query) {
+            renderAllSections(query);
+        }
+
+        function selectSize(productId, size) {
+            selectedSizes[productId] = size;
+            renderAllSections();
+            if (activeProduct && activeProduct.id === productId) {
+                renderDetailSizes(activeProduct);
+            }
+        }
+
+        function openProductDetail(productId) {
+            const allProds = getAllProducts();
+            activeProduct = allProds.find(p => p.id === productId);
+            if (!activeProduct) return;
+
+            if (!selectedSizes[activeProduct.id]) {
+                selectedSizes[activeProduct.id] = activeProduct.sizes[0];
+            }
+
+            document.getElementById('detail-tag').innerText = activeProduct.tag;
+            document.getElementById('detail-title').innerText = activeProduct.name;
+            document.getElementById('detail-price').innerText = activeProduct.price;
+            document.getElementById('detail-old-price').innerText = activeProduct.oldPrice;
+
+            document.getElementById('detail-main-img').style.backgroundImage = `url('${activeProduct.img}')`;
+            document.getElementById('detail-sub-img-1').style.backgroundImage = `url('${activeProduct.subImg1}')`;
+            document.getElementById('detail-sub-img-2').style.backgroundImage = `url('${activeProduct.subImg2}')`;
+
+            renderDetailSizes(activeProduct);
+
+            document.getElementById('detail-whatsapp-btn').onclick = function() {
+                orderWhatsApp(activeProduct.id);
+            };
+
+            const relatedContainer = document.getElementById('related-grid');
+            const relatedItems = allProds.filter(p => p.category === activeProduct.category && p.id !== activeProduct.id).slice(0, 4);
+            let relatedHtml = '';
+
+            relatedItems.forEach(item => {
+                relatedHtml += `
+                    <div onclick="openProductDetail(${item.id})" class="group bg-white border border-amber-100 rounded-3xl p-4 flex flex-col justify-between hover:shadow-xl transition cursor-pointer">
+                        <div>
+                            <div class="h-56 rounded-2xl bg-cover bg-center mb-3 relative overflow-hidden" style="background-image: url('${item.img}')">
+                                <span class="absolute top-3 left-3 bg-amber-950/80 text-amber-100 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg backdrop-blur-sm">${item.tag}</span>
+                            </div>
+                            <h4 class="font-black text-amber-950 text-sm group-hover:text-amber-700 transition">${item.name}</h4>
+                            <p class="text-xs font-bold text-slate-800 mt-1">${item.price} <span class="text-[10px] text-slate-400 line-through font-normal ml-1">${item.oldPrice}</span></p>
+                        </div>
+                        <span class="mt-4 block w-full bg-amber-900 text-white text-center py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider group-hover:bg-amber-950 transition">View Design →</span>
+                    </div>
+                `;
+            });
+            relatedContainer.innerHTML = relatedHtml;
+
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('detail-view').classList.remove('hidden');
+            document.getElementById('nav-links').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderDetailSizes(prod) {
+            const sizesContainer = document.getElementById('detail-sizes');
+            let sizeBtns = '';
+            prod.sizes.forEach(sz => {
+                const active = selectedSizes[prod.id] === sz ? 'active' : '';
+                sizeBtns += `<button onclick="selectSize(${prod.id}, '${sz}')" class="size-btn ${active} px-6 py-2.5 border border-amber-200 rounded-xl text-xs font-bold text-slate-700 transition">${sz}</button>`;
+            });
+            sizesContainer.innerHTML = sizeBtns;
+        }
+
+        function showHome() {
+            activeProduct = null;
+            document.getElementById('detail-view').classList.add('hidden');
+            document.getElementById('home-view').classList.remove('hidden');
+            document.getElementById('nav-links').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function orderWhatsApp(productId) {
+            const allProds = getAllProducts();
+            const prod = allProds.find(p => p.id === productId);
+            const chosenSize = selectedSizes[productId] || prod.sizes[0];
+            const message = `Hi, I want to inquire about *${prod.name}* (Variant/Size: *${chosenSize}*) priced at *${prod.price}* from the Anantham catalog. Please share stock availability.`;
+            window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function shareCurrentProduct() {
+            if (activeProduct) {
+                const text = `Check out this gorgeous *${activeProduct.name}* priced at *${activeProduct.price}* on Anantham Silks Showcase!`;
+                if (navigator.share) {
+                    navigator.share({ title: activeProduct.name, text: text, url: window.location.href }).catch(() => {});
+                } else {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Design link copied to clipboard!');
+                }
+            }
+        }
+
+        function openMerchantModal() {
+            document.getElementById('merchant-modal').classList.remove('hidden');
+        }
+
+        function closeMerchantModal() {
+            document.getElementById('merchant-modal').classList.add('hidden');
+        }
+
+        window.onload = function() {
+            renderAllSections();
+        };
+    </script>
+</body>
+</html>
